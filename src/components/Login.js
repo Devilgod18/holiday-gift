@@ -110,6 +110,8 @@ const Login = (props) => {
               <span>Login</span>
               
             </button>
+
+            <a href="./Register">Sign up</a>
           </div>
           
 
