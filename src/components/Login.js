@@ -102,17 +102,23 @@ const Login = (props) => {
             />
           </div>
 
-          <div className="form-group" >
+          <div className="form-group" align = "middle" >
+            
             <button className="btn btn-primary btn-block" disabled={loading}>
               {loading && (
                 <span className="spinner-border spinner-border-sm"></span>
               )}
               <span>Login</span>
-              
             </button>
-            <div align = "right" >
+            
+            <div align = "middle" >
             <form action="./Register">
-            <button class="btn btn-primary btn-block">Sign up</button>
+            <button className="btn btn-primary btn-block" disabled={loading}>
+            {loading && (
+                <span className="spinner-border spinner-border-sm"></span>
+              )}
+              <span>Register</span>
+            </button>
             </form>
             </div>
             
