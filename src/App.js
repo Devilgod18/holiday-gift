@@ -53,11 +53,11 @@ const App = () => {
           Holiday
         </Link>
         <div className="navbar-nav mr-auto">
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link to={"/home"} className="nav-link">
               Home
             </Link>
-          </li>
+          </li> */}
 
           {showModeratorBoard && (
             <li className="nav-item">
@@ -103,6 +103,7 @@ const App = () => {
               <Link to={"/login"} className="nav-link">
                 Login
               </Link>
+              
             </li>
 
             <li className="nav-item">
@@ -116,8 +117,8 @@ const App = () => {
 
       <div className="container mt-3">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Login />} />
+          {/* <Route path="/home" element={<Home />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
