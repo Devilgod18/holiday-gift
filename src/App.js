@@ -39,11 +39,11 @@ const App = () => {
           Holiday
         </Link>
         <div className="navbar-nav mr-auto">
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link to={"/home"} className="nav-link">
               Home
             </Link>
-          </li>
+          </li> */}
 
           {currentUser && (
             <li className="nav-item">
@@ -73,6 +73,7 @@ const App = () => {
               <Link to={"/login"} className="nav-link">
                 Login
               </Link>
+              
             </li>
 
             <li className="nav-item">
