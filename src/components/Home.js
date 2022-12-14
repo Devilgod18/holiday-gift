@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-
+import { Navigate } from 'react-router-dom';
+import { useSelector } from "react-redux";
 import UserService from "../services/user.service";
 
 const Home = () => {
   const [content, setContent] = useState("");
+  const { user: currentUser } = useSelector((state) => state.auth);
 
   useEffect(() => {
     UserService.getPublicContent().then(
@@ -20,6 +22,10 @@ const Home = () => {
       }
     );
   }, []);
+
+  if (!currentUser) {
+    return <Navigate to="/login" />;
+  }
 
   return (
     <div className="container">

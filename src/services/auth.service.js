@@ -25,6 +25,10 @@ const login = (username, password) => {
     });
 };
 
+const getUsername = () => {
+  
+}
+
 const logout = () => {
   localStorage.removeItem("user");
 };
