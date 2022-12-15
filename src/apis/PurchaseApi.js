@@ -1,8 +1,9 @@
 import axios from "axios";
 import { Navigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
+import authHeader from "./auth-header";
 
-const BASE = "http://localhost:8080";
+const BASE = "54.157.103.186:8080";
 const URI = BASE 
 
 const user = JSON.parse(localStorage.getItem("user"));
@@ -13,7 +14,7 @@ const PurchaseApi = {
     getAll: (setPurchasesList) => {
         axios(URI + "/purchases/" + user.id, {
             method: 'get', // other options: post, put, delete, etc.
-            headers: {}, //Put in tokens
+            headers: authHeader() //Put in tokens
           })
           .then(response => console.log(response.data))
           .catch( error => { 

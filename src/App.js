@@ -11,6 +11,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
+import HelloWorld from "./components/HelloWorld";
 
 
 import { logout } from "./actions/auth";
@@ -87,11 +88,12 @@ const App = () => {
 
       <div className="container mt-3">
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/helloworld" element={<HelloWorld />} />
         </Routes>
       </div>
 
