@@ -19,18 +19,32 @@ const login = (username, password) => {
       .then((response) => {
       if (response.data.jwt) {
         localStorage.setItem("user", JSON.stringify(response.data));
+        localStorage.setItem("username", JSON.stringify(username));
+        getUserId(username);
       }
-
       return response.data;
     });
 };
 
 const logout = () => {
   localStorage.removeItem("user");
+  localStorage.removeItem("username");
+  localStorage.removeItem("userId")
+};
+
+const getUserId = (username) => {
+  return axios
+    .get(API_URL_REGISTER + "/username")
+    .then(function (response){
+      localStorage.setItem("userId", JSON.stringify(response.data))
+      console.log(response)
+      return response.data
+    });
 };
 
 export default {
   register,
   login,
   logout,
+  getUserId,
 };
