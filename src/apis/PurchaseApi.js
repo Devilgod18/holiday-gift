@@ -1,23 +1,26 @@
 import axios from "axios";
 import { Navigate, useRevalidator } from 'react-router-dom';
 import { useSelector } from "react-redux";
-import authHeader from "./auth-header";
+import authHeader from "../services/auth-header";
 
-const BASE = "54.157.103.186:8080";
+const BASE = "http://54.157.103.186:8080";
 const URI = BASE 
 
 const user = JSON.parse(localStorage.getItem("user"));
-const userId = JSON.parse(localStorage.getItem("userId"));
+const username = JSON.parse(localStorage.getItem("username"));
 
 const PurchaseApi = {
     
     //getAll Request be made here
-    getAll: (setPurchasesList) => {
-        axios(URI + "/purchases/" + userId.id, {
+    getAll: async (setPurchasesList) => {
+        axios(URI + "/purchase/purchaseList/" + username, {
             method: 'get', // other options: post, put, delete, etc.
-            headers: { authHeader } //Put in tokens
+            headers: authHeader //Put in tokens
           })
-          .then(response => console.log(response.data))
+          .then(response => { 
+            console.log(response.data);
+            setPurchasesList(response.data)
+          })
           .catch( error => { 
             console.log(error);
           })
