@@ -8,6 +8,7 @@ import CheckButton from "react-validation/build/button";
 
 import { login } from "../actions/auth";
 
+// If values are not filled, send warning
 const required = (value) => {
   if (!value) {
     return (
@@ -17,7 +18,7 @@ const required = (value) => {
     );
   }
 };
-
+// Handle Login
 const Login = (props) => {
   let navigate = useNavigate();
 
@@ -64,6 +65,7 @@ const Login = (props) => {
     }
   };
 
+  // if logged in, send them to the home page
   if (isLoggedIn) {
   return <Navigate to="/home" />;
   }

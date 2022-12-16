@@ -1,4 +1,7 @@
-
+/**
+ *  Purchase Page
+ * @returns 
+ */
 const Purchase = () => {
 
 

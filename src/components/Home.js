@@ -20,7 +20,8 @@ const Home = () => {
     quantity: '',
     user_id: '',
   });
-
+  
+  // get full list of purchases made by user
   useEffect( () => {
     PurchaseApi.getAll(setPurchaseList)
   }, [] )
@@ -41,11 +42,10 @@ const Home = () => {
     );
   }, []);
 
+  // if user is not logged in, go back to login
   if (!currentUser) {
     return <Navigate to="/login" />;
   } 
-
-  console.log(purchaseList);
 
   return (
     <div className="EntirePage">

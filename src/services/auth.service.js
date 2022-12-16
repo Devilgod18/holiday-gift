@@ -5,6 +5,7 @@ const API_URL_REGISTER = "http://54.157.103.186:8080/user";
 const API_URL_FINDUSR = "http://54.157.103.186:8080/finduser/username?username=user4";
 const API_URL_LOGIN = "http://54.157.103.186:8080/authenticate";
 
+//API call for registering user
 const register = (username, email, password, role, enabled) => {
   return axios.post(API_URL_REGISTER, {
     username,
@@ -15,6 +16,7 @@ const register = (username, email, password, role, enabled) => {
   });
 };
 
+//API call for login
 const login = (username, password) => {
   return axios
     .post(API_URL_LOGIN, { username: username, password: password })
@@ -32,12 +34,14 @@ const login = (username, password) => {
     });
 };
 
+// logout is simply deleting JWT, and user data from local storage
 const logout = () => {
   localStorage.removeItem("user");
   localStorage.removeItem("username");
   localStorage.removeItem("id")
 };
 
+// WIP function to aquire userID from username
 const getUserId = async (username) => {
   console.log("Start of getUserId");
   try {

@@ -1,4 +1,7 @@
-
+/**
+ *  DELETE PURCHASE PAGE
+ * @returns 
+ */
 const Delete = () => {
 
 

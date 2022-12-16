@@ -8,7 +8,9 @@ const URI = BASE
 
 const user = JSON.parse(localStorage.getItem("user"));
 const username = JSON.parse(localStorage.getItem("username"));
-
+/**
+ * API for aquiring purchase data
+ */
 const PurchaseApi = {
     
     //getAll Request be made here
