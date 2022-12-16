@@ -11,6 +11,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
 import Purchase from "./components/Purchase"
+import Delete from "./components/Delete";
 
 
 import { logout } from "./actions/auth";
@@ -70,6 +71,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/purchase" element={<Purchase />} />
+          <Route path="/delete" element={<Delete />} />
         </Routes>
       </div>
 

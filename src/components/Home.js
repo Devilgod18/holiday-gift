@@ -73,8 +73,7 @@ const Home = () => {
             <ul>
               <li> <h1 className="btn">{username}</h1> </li>
               <li><form action="./purchase"><button className="btn">Make Purchase</button></form></li>
-              <li><button className="btn">Delete Purchase</button></li>
-              <li><button className="btn">Reciept</button></li>
+              <li><form action="./delete"><button className="btn">Delete Purchase</button></form></li>
             </ul>
             <div>
             <div className="Your Orders">
@@ -85,72 +84,58 @@ const Home = () => {
                     <th>Quantity</th>
                   </tr>
                   <tr>2
-                    <td />0
-                    <td />0
-                    <td />0
+                    <td>3</td>
+                    <td>2</td>
                   </tr>
                   <tr>4
-                    <td />
-                    <td />
-                    <td />
+                    <td>4</td>
+                    <td>1</td>
                   </tr>
                   <tr>5
-                    <td />
-                    <td />
-                    <td />
+                    <td>1</td>
+                    <td>1</td>
                   </tr>
                   <tr>7
-                    <td />
-                    <td />
-                    <td />
+                    <td>5</td>
+                    <td>4</td>
                   </tr>
                   <tr>9
-                    <td />
-                    <td />
-                    <td />
+                    <td>3</td>
+                    <td>2</td>
                   </tr>
                   <tr>10
-                    <td />
+                    <td>2</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
                     <td />
                     <td />
                   </tr>
                   <tr>
                     <td />
                     <td />
-                    <td />
                   </tr>
                   <tr>
-                    <td />
-                    <td />
-                    <td />
-                  </tr>
-                  <tr>
-                    <td />
                     <td />
                     <td />
                   </tr>
                   <tr>
                     <td />
                     <td />
-                    <td />
                   </tr>
                   <tr>
-                    <td />
-                    <td />
-                    <td />
-                  </tr>
-                  <tr>
-                    <td />
                     <td />
                     <td />
                   </tr>
                   <tr>
                     <td />
                     <td />
-                    <td />
                   </tr>
                   <tr>
                     <td />
+                    <td />
+                  </tr>
+                  <tr>
                     <td />
                     <td />
                   </tr>
